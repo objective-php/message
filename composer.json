@@ -1,0 +1,25 @@
+{
+    "name": "objective-php/http-message",
+    "description": "ObjectivePHP implementation for PSR-7",
+    "type": "library",
+    "require": {
+        "zendframework/zend-diactoros": "~1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8",
+        "objective-php/phpunit-extension": "^1.0",
+        "objective-php/primitives": "dev-master as 1.2"
+    },
+    "license": "GPL3-v3",
+    "authors": [
+        {
+            "name": "Gauthier 'Rusty' Delamarre",
+            "email": "gauthier@objective-php.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ObjectivePHP\\Message\\": "src/"
+        }
+    }
+}
