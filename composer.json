@@ -1,5 +1,5 @@
 {
-    "name": "objective-php/http-message",
+    "name": "objective-php/message",
     "description": "ObjectivePHP implementation for PSR-7",
     "type": "library",
     "require": {
