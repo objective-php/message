@@ -6,7 +6,7 @@
     use ObjectivePHP\Message\Request\RequestInterface;
     use ObjectivePHP\Primitives\Collection\Collection;
 
-    class HttpParameterContainer extends  AbstractContainer
+    class HttpParameterContainer extends AbstractContainer
     {
 
         /**
@@ -18,7 +18,6 @@
          * @var Collection
          */
         protected $params;
-
 
         /**
          * Constructor
@@ -33,7 +32,6 @@
         {
             return $this->params->get($origin)->get($param, $default);
         }
-
 
         public function fromGet($param, $default = null)
         {
@@ -55,7 +53,6 @@
             return $this->get($file, $default, 'files');
         }
 
-
         public function setGet($getParams)
         {
             $params = Collection::cast($getParams);
@@ -69,7 +66,6 @@
             ;
 
             $params = $namedParams->merge($unnamedParams);
-
 
             $this->params['get'] = $params;
 
@@ -99,6 +95,5 @@
         {
             return $this->request;
         }
-
 
     }
