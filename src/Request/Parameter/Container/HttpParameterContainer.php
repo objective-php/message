@@ -33,23 +33,44 @@
             return $this->params->get($origin)->get($param, $default);
         }
 
-        public function fromGet($param, $default = null)
+        public function fromGet($param = null, $default = null)
         {
+
+            if(is_null($param))
+            {
+                return $this->params->get('get');
+            }
+
             return $this->get($param, $default, 'get');
         }
 
-        public function fromPost($param, $default = null)
+        public function fromPost($param = null, $default = null)
         {
+            if (is_null($param))
+            {
+                return $this->params->get('post');
+            }
+
             return $this->get($param, $default, 'post');
         }
 
-        public function fromEnv($var, $default = null)
+        public function fromEnv($var = null, $default = null)
         {
+            if (is_null($var))
+            {
+                return $this->params->get('env');
+            }
+
             return $this->get($var, $default, 'env');
         }
 
-        public function fromFiles($file, $default = null)
+        public function fromFiles($file = null, $default = null)
         {
+            if (is_null($file))
+            {
+                return $this->params->get('files');
+            }
+
             return $this->get($file, $default, 'files');
         }
 
