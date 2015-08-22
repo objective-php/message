@@ -3,9 +3,7 @@
     "description": "ObjectivePHP implementation for PSR-7",
     "type": "library",
     "require": {
-        "zendframework/zend-diactoros": "~1.0"
-    },
-    "require": {
+        "zendframework/zend-diactoros": "~1.0",
         "objective-php/primitives": "dev-master"
     },
     "require-dev": {
