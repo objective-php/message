@@ -7,6 +7,11 @@
     use Psr\Http\Message\StreamInterface;
     use Zend\Diactoros\Request;
 
+    /**
+     * Class HttpRequest
+     *
+     * @package ObjectivePHP\Message\Request
+     */
     class HttpRequest extends Request implements RequestInterface
     {
 
@@ -26,7 +31,6 @@
         public function __construct($uri = null, $method = null, $body = 'php://input', array $headers = [])
         {
             parent::__construct($uri, $method, $body, $headers);
-
         }
 
         /**
@@ -49,7 +53,7 @@
         public function getParameters()
         {
 
-            if(is_null($this->parameters))
+            if (is_null($this->parameters))
             {
                 // build default parameter container from request
                 $this->parameters = new HttpParameterContainer($this);

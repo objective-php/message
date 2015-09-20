@@ -6,6 +6,11 @@
     use ObjectivePHP\Message\Request\RequestInterface;
     use ObjectivePHP\Primitives\Collection\Collection;
 
+    /**
+     * Class HttpParameterContainer
+     *
+     * @package ObjectivePHP\Message\Request\Parameter\Container
+     */
     class HttpParameterContainer extends AbstractContainer
     {
 
@@ -28,52 +33,12 @@
             $this->setGet($_GET);
         }
 
-        public function get($param, $default = null, $origin = 'get')
-        {
-            return $this->params->get($origin)->get($param, $default);
-        }
-
-        public function fromGet($param = null, $default = null)
-        {
-
-            if(is_null($param))
-            {
-                return $this->params->get('get');
-            }
-
-            return $this->get($param, $default, 'get');
-        }
-
-        public function fromPost($param = null, $default = null)
-        {
-            if (is_null($param))
-            {
-                return $this->params->get('post');
-            }
-
-            return $this->get($param, $default, 'post');
-        }
-
-        public function fromEnv($var = null, $default = null)
-        {
-            if (is_null($var))
-            {
-                return $this->params->get('env');
-            }
-
-            return $this->get($var, $default, 'env');
-        }
-
-        public function fromFiles($file = null, $default = null)
-        {
-            if (is_null($file))
-            {
-                return $this->params->get('files');
-            }
-
-            return $this->get($file, $default, 'files');
-        }
-
+        /**
+         * @param $getParams
+         *
+         * @return $this
+         * @throws \ObjectivePHP\Primitives\Exception
+         */
         public function setGet($getParams)
         {
             $params = Collection::cast($getParams);
@@ -93,19 +58,35 @@
             return $this;
         }
 
-        public function setPost($postParams)
+        /**
+         * @param null $param
+         * @param null $default
+         *
+         * @return mixed|null
+         * @throws \ObjectivePHP\Primitives\Exception
+         */
+        public function fromGet($param = null, $default = null)
         {
-            $this->params['post'] = Collection::cast($postParams);
+
+            if (is_null($param))
+            {
+                return $this->params->get('get');
+            }
+
+            return $this->get($param, $default, 'get');
         }
 
-        public function setFiles($files)
+        /**
+         * @param        $param
+         * @param null   $default
+         * @param string $origin
+         *
+         * @return mixed
+         * @throws \ObjectivePHP\Primitives\Exception
+         */
+        public function get($param, $default = null, $origin = 'get')
         {
-            $this->params['files'] = Collection::cast($files);
-        }
-
-        public function setEnv($envVars)
-        {
-            $this->params['env'] = Collection::cast($envVars);
+            return $this->params->get($origin)->get($param, $default);
         }
 
         /**
@@ -115,6 +96,81 @@
         public function getRequest()
         {
             return $this->request;
+        }
+
+        /**
+         * @param null $param
+         * @param null $default
+         *
+         * @return mixed|null
+         * @throws \ObjectivePHP\Primitives\Exception
+         */
+        public function fromPost($param = null, $default = null)
+        {
+            if (is_null($param))
+            {
+                return $this->params->get('post');
+            }
+
+            return $this->get($param, $default, 'post');
+        }
+
+        /**
+         * @param null $var
+         * @param null $default
+         *
+         * @return mixed|null
+         * @throws \ObjectivePHP\Primitives\Exception
+         */
+        public function fromEnv($var = null, $default = null)
+        {
+            if (is_null($var))
+            {
+                return $this->params->get('env');
+            }
+
+            return $this->get($var, $default, 'env');
+        }
+
+        /**
+         * @param null $file
+         * @param null $default
+         *
+         * @return mixed|null
+         * @throws \ObjectivePHP\Primitives\Exception
+         */
+        public function fromFiles($file = null, $default = null)
+        {
+            if (is_null($file))
+            {
+                return $this->params->get('files');
+            }
+
+            return $this->get($file, $default, 'files');
+        }
+
+        /**
+         * @param $postParams
+         */
+        public function setPost($postParams)
+        {
+            $this->params['post'] = Collection::cast($postParams);
+        }
+
+        /**
+         * @param $files
+         */
+        public function setFiles($files)
+        {
+            $this->params['files'] = Collection::cast($files);
+        }
+
+        /**
+         * @param $envVars
+         */
+        public function setEnv($envVars)
+        {
+            $this->params['env'] = Collection::cast($envVars);
         }
 
     }

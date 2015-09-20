@@ -3,7 +3,8 @@
     namespace ObjectivePHP\Message\Request;
     
     
-    use ObjectivePHP\Parameter\Container\ParameterContainerInterface;
+
+    use ObjectivePHP\Message\Request\Parameter\Container\ParameterContainerInterface;
 
     interface RequestInterface
     {
@@ -16,6 +17,11 @@
          * @return ParameterContainerInterface|mixed
          */
         public function getParam($param = null, $default = null, $origin = null);
+
+        /**
+         * @return ParameterContainerInterface
+         */
+        public function getParameters();
 
         /**
          * @return mixed HTTP method (GET, POST, PUT, DELETE) or CLI
