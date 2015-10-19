@@ -31,6 +31,7 @@
         {
             $this->params = new Collection();
             $this->setGet($_GET);
+            $this->setPost($_POST);
         }
 
         /**
@@ -155,6 +156,8 @@
         public function setPost($postParams)
         {
             $this->params['post'] = Collection::cast($postParams);
+
+            return $this;
         }
 
         /**
@@ -163,6 +166,8 @@
         public function setFiles($files)
         {
             $this->params['files'] = Collection::cast($files);
+
+            return $this;
         }
 
         /**
@@ -171,6 +176,8 @@
         public function setEnv($envVars)
         {
             $this->params['env'] = Collection::cast($envVars);
+
+            return $this;
         }
 
     }
