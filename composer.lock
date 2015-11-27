@@ -4,8 +4,63 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "eb976e5be8e730dbe9dad2354d3889dd",
+    "hash": "155ad494f74db4ebb923b3eff71b174b",
+    "content-hash": "edd8e890aa2e4c7c362ec6e15358e48a",
     "packages": [
+        {
+            "name": "objective-php/primitives",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/objective-php/primitives.git",
+                "reference": "e71e1a48d921da7db51ac54bc0042a694875714c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/objective-php/primitives/zipball/e71e1a48d921da7db51ac54bc0042a694875714c",
+                "reference": "e71e1a48d921da7db51ac54bc0042a694875714c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "objective-php/phpunit-extension": "1.0",
+                "phpunit/phpunit": "4.*"
+            },
+            "suggest": {
+                "objective-php/matcher": "~1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ObjectivePHP\\Primitives\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Gauthier 'Rusty' Delamarre",
+                    "email": "gauthier@objective-php.org",
+                    "role": "lead"
+                },
+                {
+                    "name": "Ronan 'Gloo' Teissier",
+                    "email": "ronan@objective-php.org",
+                    "role": "dev"
+                }
+            ],
+            "description": "Primitives classes for ObjectivePHP",
+            "homepage": "https://github.com/objective-php/primitives",
+            "keywords": [
+                "objective php",
+                "primitives"
+            ],
+            "time": "2015-11-25 16:00:57"
+        },
         {
             "name": "psr/http-message",
             "version": "1.0",
@@ -57,16 +112,16 @@
         },
         {
             "name": "zendframework/zend-diactoros",
-            "version": "1.1.2",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-diactoros.git",
-                "reference": "bac9f86a4dbf282a3029602411ae655225bc370b"
+                "reference": "edfda00b9831630c19c411f85f50a47bb66af457"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/bac9f86a4dbf282a3029602411ae655225bc370b",
-                "reference": "bac9f86a4dbf282a3029602411ae655225bc370b",
+                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/edfda00b9831630c19c411f85f50a47bb66af457",
+                "reference": "edfda00b9831630c19c411f85f50a47bb66af457",
                 "shasum": ""
             },
             "require": {
@@ -83,8 +138,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev",
-                    "dev-develop": "1.1-dev"
+                    "dev-master": "1.2-dev",
+                    "dev-develop": "1.3-dev"
                 }
             },
             "autoload": {
@@ -103,7 +158,7 @@
                 "psr",
                 "psr-7"
             ],
-            "time": "2015-07-12 17:59:47"
+            "time": "2015-11-24 19:16:22"
         }
     ],
     "packages-dev": [
@@ -162,78 +217,29 @@
             "time": "2015-06-14 21:17:01"
         },
         {
-            "name": "objective-php/phpunit-extension",
-            "version": "v1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/objective-php/phpunit-extension.git",
-                "reference": "e500f79d1afdc3f49237f104b3995916363c1ac8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/objective-php/phpunit-extension/zipball/e500f79d1afdc3f49237f104b3995916363c1ac8",
-                "reference": "e500f79d1afdc3f49237f104b3995916363c1ac8",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "ObjectivePHP\\PHPUnit": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Gauthier 'Rusty' Delamarre",
-                    "email": "gauthier@objective-php.org",
-                    "role": "lead"
-                }
-            ],
-            "description": "Some add-ons for PHPUnit Unit Test Framework",
-            "homepage": "https://github.com/objective-php/phpunit-extension",
-            "keywords": [
-                "objective php",
-                "phpunit"
-            ],
-            "time": "2015-05-16 15:35:37"
-        },
-        {
-            "name": "objective-php/primitives",
+            "name": "objective-php/components",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/objective-php/primitives.git",
-                "reference": "ab79ce3322b3af3b7503961955e0e5331815e140"
+                "url": "https://github.com/objective-php/components.git",
+                "reference": "4c62d3c4f5e19e7c63661416afd63a58c4ee01e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/objective-php/primitives/zipball/ab79ce3322b3af3b7503961955e0e5331815e140",
-                "reference": "ab79ce3322b3af3b7503961955e0e5331815e140",
+                "url": "https://api.github.com/repos/objective-php/components/zipball/4c62d3c4f5e19e7c63661416afd63a58c4ee01e6",
+                "reference": "4c62d3c4f5e19e7c63661416afd63a58c4ee01e6",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.6.0"
+                "php": ">=5.7.0"
             },
             "require-dev": {
-                "objective-php/phpunit-extension": "1.0",
                 "phpunit/phpunit": "4.*"
-            },
-            "suggest": {
-                "objective-php/matcher": "~1.1"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "ObjectivePHP\\Primitives\\": "src/"
+                    "ObjectivePHP\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -247,18 +253,18 @@
                     "role": "lead"
                 },
                 {
-                    "name": "Ronan 'Gloo' Teissier",
-                    "email": "ronan@objective-php.org",
+                    "name": "Jérôme 'Neofox' Schaeffer",
+                    "email": "jerome@objective-php.org",
                     "role": "dev"
                 }
             ],
-            "description": "Primitives classes for ObjectivePHP",
-            "homepage": "https://github.com/objective-php/primitives",
+            "description": "Objective PHP Components",
+            "homepage": "https://github.com/objective-php/components",
             "keywords": [
                 "objective php",
                 "primitives"
             ],
-            "time": "2015-08-09 14:28:19"
+            "time": "2015-11-27 11:06:36"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -311,16 +317,16 @@
         },
         {
             "name": "phpspec/prophecy",
-            "version": "v1.4.1",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "3132b1f44c7bf2ec4c7eb2d3cb78fdeca760d373"
+                "reference": "4745ded9307786b730d7a60df5cb5a6c43cf95f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/3132b1f44c7bf2ec4c7eb2d3cb78fdeca760d373",
-                "reference": "3132b1f44c7bf2ec4c7eb2d3cb78fdeca760d373",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/4745ded9307786b730d7a60df5cb5a6c43cf95f7",
+                "reference": "4745ded9307786b730d7a60df5cb5a6c43cf95f7",
                 "shasum": ""
             },
             "require": {
@@ -367,20 +373,20 @@
                 "spy",
                 "stub"
             ],
-            "time": "2015-04-27 22:15:08"
+            "time": "2015-08-13 10:07:40"
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "2.2.2",
+            "version": "2.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "2d7c03c0e4e080901b8f33b2897b0577be18a13c"
+                "reference": "eabf68b476ac7d0f73793aada060f1c1a9bf8979"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/2d7c03c0e4e080901b8f33b2897b0577be18a13c",
-                "reference": "2d7c03c0e4e080901b8f33b2897b0577be18a13c",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/eabf68b476ac7d0f73793aada060f1c1a9bf8979",
+                "reference": "eabf68b476ac7d0f73793aada060f1c1a9bf8979",
                 "shasum": ""
             },
             "require": {
@@ -429,7 +435,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-08-04 03:42:39"
+            "time": "2015-10-06 15:47:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -562,16 +568,16 @@
         },
         {
             "name": "phpunit/php-token-stream",
-            "version": "1.4.3",
+            "version": "1.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-token-stream.git",
-                "reference": "7a9b0969488c3c54fd62b4d504b3ec758fd005d9"
+                "reference": "3144ae21711fb6cac0b1ab4cbe63b75ce3d4e8da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/7a9b0969488c3c54fd62b4d504b3ec758fd005d9",
-                "reference": "7a9b0969488c3c54fd62b4d504b3ec758fd005d9",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/3144ae21711fb6cac0b1ab4cbe63b75ce3d4e8da",
+                "reference": "3144ae21711fb6cac0b1ab4cbe63b75ce3d4e8da",
                 "shasum": ""
             },
             "require": {
@@ -607,20 +613,20 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2015-06-19 03:43:16"
+            "time": "2015-09-15 10:49:45"
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.8.3",
+            "version": "4.8.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "fd3050e26e3105f416d74c4d33aea659b406c59d"
+                "reference": "fa33d4ad96481b91df343d83e8c8aabed6b1dfd3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/fd3050e26e3105f416d74c4d33aea659b406c59d",
-                "reference": "fd3050e26e3105f416d74c4d33aea659b406c59d",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/fa33d4ad96481b91df343d83e8c8aabed6b1dfd3",
+                "reference": "fa33d4ad96481b91df343d83e8c8aabed6b1dfd3",
                 "shasum": ""
             },
             "require": {
@@ -679,24 +685,24 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-08-10 09:16:56"
+            "time": "2015-11-11 11:32:49"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
-            "version": "2.3.6",
+            "version": "2.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "18dfbcb81d05e2296c0bcddd4db96cade75e6f42"
+                "reference": "ac8e7a3db35738d56ee9a76e78a4e03d97628983"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/18dfbcb81d05e2296c0bcddd4db96cade75e6f42",
-                "reference": "18dfbcb81d05e2296c0bcddd4db96cade75e6f42",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/ac8e7a3db35738d56ee9a76e78a4e03d97628983",
+                "reference": "ac8e7a3db35738d56ee9a76e78a4e03d97628983",
                 "shasum": ""
             },
             "require": {
-                "doctrine/instantiator": "~1.0,>=1.0.2",
+                "doctrine/instantiator": "^1.0.2",
                 "php": ">=5.3.3",
                 "phpunit/php-text-template": "~1.2",
                 "sebastian/exporter": "~1.2"
@@ -735,7 +741,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2015-07-10 06:54:24"
+            "time": "2015-10-02 06:51:40"
         },
         {
             "name": "sebastian/comparator",
@@ -971,16 +977,16 @@
         },
         {
             "name": "sebastian/global-state",
-            "version": "1.0.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/global-state.git",
-                "reference": "c7428acdb62ece0a45e6306f1ae85e1c05b09c01"
+                "reference": "bc37d50fea7d017d3d340f230811c9f1d7280af4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/global-state/zipball/c7428acdb62ece0a45e6306f1ae85e1c05b09c01",
-                "reference": "c7428acdb62ece0a45e6306f1ae85e1c05b09c01",
+                "url": "https://api.github.com/repos/sebastianbergmann/global-state/zipball/bc37d50fea7d017d3d340f230811c9f1d7280af4",
+                "reference": "bc37d50fea7d017d3d340f230811c9f1d7280af4",
                 "shasum": ""
             },
             "require": {
@@ -1018,7 +1024,7 @@
             "keywords": [
                 "global state"
             ],
-            "time": "2014-10-06 09:23:50"
+            "time": "2015-10-12 03:26:01"
         },
         {
             "name": "sebastian/recursion-context",
@@ -1110,23 +1116,20 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.7.3",
+            "version": "v2.7.7",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/Yaml.git",
-                "reference": "71340e996171474a53f3d29111d046be4ad8a0ff"
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "4cfcd7a9fceba662b3c036b7d9a91f6197af046c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/71340e996171474a53f3d29111d046be4ad8a0ff",
-                "reference": "71340e996171474a53f3d29111d046be4ad8a0ff",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/4cfcd7a9fceba662b3c036b7d9a91f6197af046c",
+                "reference": "4cfcd7a9fceba662b3c036b7d9a91f6197af046c",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.9"
-            },
-            "require-dev": {
-                "symfony/phpunit-bridge": "~2.7"
             },
             "type": "library",
             "extra": {
@@ -1137,7 +1140,10 @@
             "autoload": {
                 "psr-4": {
                     "Symfony\\Component\\Yaml\\": ""
-                }
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1155,20 +1161,14 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2015-07-28 14:07:07"
+            "time": "2015-11-18 13:41:01"
         }
     ],
-    "aliases": [
-        {
-            "alias": "1.2",
-            "alias_normalized": "1.2.0.0",
-            "version": "9999999-dev",
-            "package": "objective-php/primitives"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "objective-php/primitives": 20
+        "objective-php/primitives": 20,
+        "objective-php/components": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

@@ -7,8 +7,8 @@
         "objective-php/primitives": "dev-master"
     },
     "require-dev": {
-        "phpunit/phpunit": "^4.8",
-        "objective-php/phpunit-extension": "^1.0"
+        "phpunit/phpunit": "4.*",
+        "objective-php/components": "dev-master"
     },
     "license": "GPL3-v3",
     "authors": [
