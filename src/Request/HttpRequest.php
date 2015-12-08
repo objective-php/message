@@ -21,6 +21,11 @@
         protected $parameters;
 
         /**
+         * @var string
+         */
+        protected $route;
+
+        /**
          * @param null|string                     $uri     URI for the request, if any.
          * @param null|string                     $method  HTTP method for the request, if any.
          * @param string|resource|StreamInterface $body    Message body, if any.
@@ -61,4 +66,25 @@
 
             return $this->parameters;
         }
+
+        /**
+         * @return string
+         */
+        public function getRoute()
+        {
+            return $this->route;
+        }
+
+        /**
+         * @param string $route
+         *
+         * @return $this
+         */
+        public function setRoute($route)
+        {
+            $this->route = $route;
+
+            return $this;
+        }
+
     }

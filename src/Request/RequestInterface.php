@@ -6,6 +6,11 @@
 
     use ObjectivePHP\Message\Request\Parameter\Container\ParameterContainerInterface;
 
+    /**
+     * Interface RequestInterface
+     *
+     * @package ObjectivePHP\Message\Request
+     */
     interface RequestInterface
     {
         /**
@@ -27,5 +32,21 @@
          * @return mixed HTTP method (GET, POST, PUT, DELETE) or CLI
          */
         public function getMethod();
+
+        /**
+         * Request route
+         *
+         * Default to URI path
+         *
+         * @return mixed
+         */
+        public function getRoute();
+
+        /**
+         * @param $route
+         *
+         * @return mixed
+         */
+        public function setRoute($route);
 
     }
