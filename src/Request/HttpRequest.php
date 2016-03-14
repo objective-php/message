@@ -26,6 +26,11 @@
         protected $route;
 
         /**
+         * @var mixed
+         */
+        protected $action;
+
+        /**
          * @param null|string                     $uri     URI for the request, if any.
          * @param null|string                     $method  HTTP method for the request, if any.
          * @param string|resource|StreamInterface $body    Message body, if any.
@@ -85,6 +90,22 @@
             $this->route = $route;
 
             return $this;
+        }
+
+        /**
+         * @return mixed
+         */
+        public function getAction()
+        {
+            return $this->action;
+        }
+
+        /**
+         * @param mixed $action
+         */
+        public function setAction($action)
+        {
+            $this->action = $action;
         }
 
     }
