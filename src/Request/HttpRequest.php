@@ -73,6 +73,18 @@
         }
 
         /**
+         * @param HttpParameterContainer $parameters
+         */
+        public function setParameters(HttpParameterContainer $parameters)
+        {
+            $this->parameters = $parameters;
+
+            return $this;
+        }
+
+
+
+        /**
          * @return string
          */
         public function getRoute()
