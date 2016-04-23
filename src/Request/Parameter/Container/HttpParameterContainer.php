@@ -153,6 +153,26 @@
             return $this->get($file, $default, 'files');
         }
 
+
+        /**
+         * @param null $route
+         * @param null $default
+         *
+         * @return mixed|null
+         * @throws \ObjectivePHP\Primitives\Exception
+         */
+        public function fromRoute($route = null, $default = null)
+        {
+            if (is_null($route))
+            {
+                return $this->params->get('route');
+            }
+
+            return $this->get($route, $default, 'route');
+        }
+
+
+
         /**
          * @param $postParams
          */
@@ -179,6 +199,13 @@
         public function setEnv($envVars)
         {
             $this->params['env'] = Collection::cast($envVars);
+
+            return $this;
+        }
+
+        public function setRoute($routeVars)
+        {
+            $this->params['route'] = Collection::cast($routeVars);
 
             return $this;
         }
