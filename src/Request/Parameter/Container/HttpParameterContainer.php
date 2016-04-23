@@ -26,12 +26,15 @@
 
         /**
          * Constructor
+         * @param HttpRequest $request
          */
-        public function __construct(RequestInterface $requestInterface)
+        public function __construct(HttpRequest $request)
         {
             $this->params = new Collection();
-            $this->setGet($_GET);
-            $this->setPost($_POST);
+            $this->setGet($request->getGet());
+            $this->setPost($request->getPost());
+
+            $request->setParameters($this);
         }
 
         /**

@@ -31,6 +31,16 @@
         protected $action;
 
         /**
+         * @var
+         */
+        protected $get = [];
+
+        /**
+         * @var array
+         */
+        protected $post = [];
+
+        /**
          * @param null|string                     $uri     URI for the request, if any.
          * @param null|string                     $method  HTTP method for the request, if any.
          * @param string|resource|StreamInterface $body    Message body, if any.
@@ -119,5 +129,42 @@
         {
             $this->action = $action;
         }
+
+        /**
+         * @return mixed
+         */
+        public function getGet()
+        {
+            return $this->get;
+        }
+
+        /**
+         * @param mixed $get
+         */
+        public function setGet(array $get)
+        {
+            $this->get = $get;
+
+            return $this;
+        }
+
+        /**
+         * @return array
+         */
+        public function getPost()
+        {
+            return $this->post;
+        }
+
+        /**
+         * @param array $post
+         */
+        public function setPost(array $post)
+        {
+            $this->post = $post;
+
+            return $this;
+        }
+
 
     }
