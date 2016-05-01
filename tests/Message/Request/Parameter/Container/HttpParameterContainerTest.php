@@ -10,11 +10,12 @@
     {
         public function testParametersAreExtractedFromEnvironment()
         {
-            $_GET['param1'] = 'value';
-            $_GET['param0 value'] = '';
+            $GET['param1'] = 'value';
+            $GET['param0 value'] = '';
 
 
             $request = $this->getMock(HttpRequest::class);
+            $request->method('getGet')->willReturn($GET);
 
             $container = new HttpParameterContainer($request);
 
