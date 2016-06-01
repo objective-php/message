@@ -4,6 +4,7 @@
 
     use ObjectivePHP\Message\Request\Parameter\Container\HttpParameterContainer;
     use ObjectivePHP\Message\Request\Parameter\Container\ParameterContainerInterface;
+    use ObjectivePHP\Router\MatchedRoute;
     use Psr\Http\Message\StreamInterface;
     use Zend\Diactoros\Request;
 
@@ -29,6 +30,11 @@
          * @var mixed
          */
         protected $action;
+
+        /**
+         * @var MatchedRoute
+         */
+        protected $matchedRoute;
 
         /**
          * @var
@@ -166,5 +172,22 @@
             return $this;
         }
 
+        /**
+         * @return mixed
+         */
+        public function getMatchedRoute()
+        {
+            return $this->matchedRoute;
+        }
+
+        /**
+         * @param mixed $matchedRoute
+         */
+        public function setMatchedRoute(MatchedRoute $matchedRoute)
+        {
+            $this->matchedRoute = $matchedRoute;
+
+            return $this;
+        }
 
     }
