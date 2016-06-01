@@ -5,7 +5,7 @@
     
 
     use ObjectivePHP\Message\Request\Parameter\Container\ParameterContainerInterface;
-
+    use ObjectivePHP\Router\MatchedRoute;
     /**
      * Interface RequestInterface
      *
@@ -30,15 +30,17 @@
 
         /**
          * @return mixed HTTP method (GET, POST, PUT, DELETE) or CLI
+         *
+         * @deprecated
          */
         public function getMethod();
 
         /**
          * Request route
          *
-         * Default to URI path
-         *
          * @return mixed
+         *
+         * @deprecated
          */
         public function getRoute();
 
@@ -48,5 +50,16 @@
          * @return mixed
          */
         public function setRoute($route);
+
+        /**
+         * @param MatchedRoute $matchedRoute
+         * @return mixed
+         */
+        public function setMatchedRoute(MatchedRoute $matchedRoute);
+
+        /**
+         * @return MatchedRoute
+         */
+        public function getMatchedRoute();
 
     }

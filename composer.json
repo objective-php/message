@@ -8,7 +8,8 @@
     },
     "require-dev": {
         "phpunit/phpunit": "5.*",
-        "objective-php/phpunit-extension": "1.*"
+        "objective-php/phpunit-extension": "1.*",
+        "objective-php/router": "1.*"
     },
     "license": "GPL3-v3",
     "authors": [
