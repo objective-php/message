@@ -33,7 +33,12 @@
             $this->params = new Collection();
             $this->setGet($request->getGet());
             $this->setPost($request->getPost());
-
+            $this->setEnv($_ENV);
+            $matchedRoute = $request->getMatchedRoute();
+            if($matchedRoute)
+            {
+                $this->setRoute($matchedRoute->getParams());
+            }
             $request->setParameters($this);
         }
 
