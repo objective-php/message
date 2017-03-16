@@ -11,7 +11,7 @@
      *
      * @package ObjectivePHP\Message\Request\Parameter\Container
      */
-    class HttpParameterContainer extends AbstractContainer
+    class HttpParameterContainer implements ParameterContainerInterface
     {
 
         /**
@@ -28,17 +28,25 @@
          * Constructor
          * @param HttpRequest $request
          */
-        public function __construct(HttpRequest $request)
+        public function __construct(HttpRequest $request = null)
         {
             $this->params = new Collection();
-            $this->setGet($request->getGet());
-            $this->setPost($request->getPost());
-            $this->setEnv($_ENV);
-            $matchedRoute = $request->getMatchedRoute();
-            if($matchedRoute)
+            
+            if($request)
             {
-                $this->setRoute($matchedRoute->getParams());
+                $this->setGet($request->getGet());
+                $this->setPost($request->getPost());
+                $matchedRoute = $request->getMatchedRoute();
+                
+                if($matchedRoute)
+                {
+                    $this->setRoute($matchedRoute->getParams());
+                }
             }
+            
+            
+            $this->setEnv($_ENV);
+            
             $request->setParameters($this);
         }
 
@@ -96,15 +104,6 @@
         public function get($param, $default = null, $origin = 'get')
         {
             return $this->params->get($origin)->get($param, $default);
-        }
-
-        /**
-         * @codeAssistHint
-         * @return HttpRequest
-         */
-        public function getRequest()
-        {
-            return $this->request;
         }
 
         /**

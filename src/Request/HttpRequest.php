@@ -66,9 +66,9 @@
          * @param $param    mixed       Default value
          * @param $origin   string       Source name (for instance 'get' for HTTP param)
          *
-         * @return ParameterContainerInterface|mixed
+         * @return mixed
          */
-        public function getParam($param = null, $default = null, $origin = null)
+        public function getParam($param, $default = null, $origin = null)
         {
             $this->getParameters()->get($param, $default, $origin);
         }
@@ -76,7 +76,7 @@
         /**
          * @return HttpParameterContainer
          */
-        public function getParameters()
+        public function getParameters() : ParameterContainerInterface
         {
 
             if (is_null($this->parameters))
@@ -91,7 +91,7 @@
         /**
          * @param HttpParameterContainer $parameters
          */
-        public function setParameters(HttpParameterContainer $parameters)
+        public function setParameters(ParameterContainerInterface $parameters)
         {
             $this->parameters = $parameters;
 

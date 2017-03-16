@@ -16,16 +16,6 @@
          */
         public function get($param, $default = null, $origin = null);
 
-        /**
-         * @param RequestInterface $request
-         *
-         * @return mixed
-         */
-        public function setRequest(RequestInterface $request);
-
-        /**
-         * @return RequestInterface
-         */
-        public function getRequest();
+       
 
     }

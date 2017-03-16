@@ -14,7 +14,7 @@
             $GET['param0 value'] = '';
 
 
-            $request = $this->getMock(HttpRequest::class);
+            $request = $this->getMockBuilder(HttpRequest::class)->getMock();
             $request->method('getGet')->willReturn($GET);
 
             $container = new HttpParameterContainer($request);

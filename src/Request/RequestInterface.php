@@ -19,19 +19,17 @@
          * @param $param    string      Parameter name
          * @param $param    mixed       Default value
          * @param $origin  string       Source name (for instance 'get' for HTTP param)
-         * @return ParameterContainerInterface|mixed
+         * @return mixed
          */
-        public function getParam($param = null, $default = null, $origin = null);
+        public function getParam($param, $default = null, $origin = null);
 
         /**
          * @return ParameterContainerInterface
          */
-        public function getParameters();
+        public function getParameters() : ParameterContainerInterface;
 
         /**
          * @return mixed HTTP method (GET, POST, PUT, DELETE) or CLI
-         *
-         * @deprecated
          */
         public function getMethod();
 
@@ -39,8 +37,6 @@
          * Request route
          *
          * @return mixed
-         *
-         * @deprecated
          */
         public function getRoute();
 
