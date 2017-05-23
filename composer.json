@@ -3,13 +3,13 @@
     "description": "ObjectivePHP implementation for PSR-7",
     "type": "library",
     "require": {
-        "zendframework/zend-diactoros": "~1.0",
-        "objective-php/primitives": "1.*"
+        "zendframework/zend-diactoros": "^1.0",
+        "objective-php/primitives": "^1.3.0"
     },
     "require-dev": {
         "phpunit/phpunit": "5.*",
         "objective-php/phpunit-extension": "1.*",
-        "objective-php/router": "dev-master as 1.0"
+        "objective-php/router": "^1.0"
     },
     "license": "GPL3-v3",
     "authors": [

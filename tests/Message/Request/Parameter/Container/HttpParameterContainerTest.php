@@ -22,6 +22,18 @@
             $this->assertEquals('value', $container->get('param1'));
             $this->assertEquals('param0 value', $container->get(0));
 
+        }
+
+        public function testGetParameterEqualToZero()
+        {
+            $GET['param1'] = '0';
+
+            $request = $this->getMockBuilder(HttpRequest::class)->getMock();
+            $request->method('getGet')->willReturn($GET);
+
+            $container = new HttpParameterContainer($request);
+
+            $this->assertSame('0', $container->get('param1'));
 
         }
 

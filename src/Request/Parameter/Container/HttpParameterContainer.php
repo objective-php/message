@@ -61,10 +61,12 @@
             $params = Collection::cast($getParams);
 
             // make params with no values available as anonymous params
-            $namedParams   = $params->copy()->filter();
+            $namedParams   = $params->copy()->filter(function($value) {
+                return $value !== '';
+            });
             $unnamedParams = $params->copy()->filter(function ($value)
             {
-                return !$value;
+                return $value === '';
             })->flip()
             ;
 
