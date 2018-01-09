@@ -36,12 +36,6 @@
             {
                 $this->setGet($request->getGet());
                 $this->setPost($request->getPost());
-                $matchedRoute = $request->getMatchedRoute();
-                
-                if($matchedRoute)
-                {
-                    $this->setRoute($matchedRoute->getParams());
-                }
             }
             
             
