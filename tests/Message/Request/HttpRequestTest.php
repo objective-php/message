@@ -94,7 +94,7 @@ class HttpRequestTest extends PHPUnit_Framework_TestCase
     {
         $fixtureBodyParsed = [];
 
-        $propertyBodyParsed = new ReflectionProperty($this->instance, 'bodyParsed');
+        $propertyBodyParsed = new ReflectionProperty($this->instance, 'parsedBody');
         $propertyBodyParsed->setAccessible(true);
         $propertyBodyParsed->setValue($this->instance, $fixtureBodyParsed);
 
@@ -235,7 +235,7 @@ class HttpRequestTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals([], $this->instance->getParsedBody());
 
-        $propertyBodyParsed = new ReflectionProperty($this->instance, 'bodyParsed');
+        $propertyBodyParsed = new ReflectionProperty($this->instance, 'parsedBody');
         $propertyBodyParsed->setAccessible(true);
         $this->assertEquals([], $propertyBodyParsed->getValue($this->instance));
     }

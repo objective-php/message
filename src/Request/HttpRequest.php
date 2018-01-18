@@ -53,7 +53,7 @@ class HttpRequest extends Request implements RequestInterface
     /**
      * @var bool|array
      */
-    protected $bodyParsed = false;
+    protected $parsedBody = false;
 
     /**
      * @var array
@@ -108,8 +108,8 @@ class HttpRequest extends Request implements RequestInterface
      */
     public function getParsedBody()
     {
-        if ($this->bodyParsed !== false) {
-            return $this->bodyParsed;
+        if ($this->parsedBody !== false) {
+            return $this->parsedBody;
         }
 
         $contentsBody = (string)$this->getBody();
@@ -131,8 +131,8 @@ class HttpRequest extends Request implements RequestInterface
                     'Request body media type parser return value must be an array, an object, or null'
                 );
             }
-            $this->bodyParsed = $parsed;
-            return $this->bodyParsed;
+            $this->parsedBody = $parsed;
+            return $this->parsedBody;
         }
         return null;
     }
