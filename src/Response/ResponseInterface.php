@@ -1,19 +1,19 @@
 <?php
     
-    namespace ObjectivePHP\Message\Response;
+namespace ObjectivePHP\Message\Response;
 
-    use Psr\Http\Message\StreamInterface;
+use Psr\Http\Message\StreamInterface;
 
+/**
+ * Interface ResponseInterface
+ *
+ * @package ObjectivePHP\Message\Response
+ */
+interface ResponseInterface
+{
     /**
-     * Interface ResponseInterface
-     *
-     * @package ObjectivePHP\Message\Response
+     * @return StreamInterface
      */
-    interface ResponseInterface
-    {
-        /**
-         * @return StreamInterface
-         */
-        public function getBody();
+    public function getBody();
 
-    }
+}
