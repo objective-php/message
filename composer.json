@@ -11,7 +11,7 @@
         "objective-php/phpunit-extension": "1.*",
         "objective-php/router": "^1.0"
     },
-    "license": "GPL3-v3",
+    "license": "GPL-3.0-only",
     "authors": [
         {
             "name": "Gauthier 'Rusty' Delamarre",
